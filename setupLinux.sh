@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "##Iniciando o script...##"
 sudo apt update
