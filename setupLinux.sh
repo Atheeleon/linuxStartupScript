@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "##Iniciando o script...##"
 sleep 1
