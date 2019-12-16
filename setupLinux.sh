@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "##Iniciando o script...##"
+sleep 2
 sudo apt update
 sudo apt upgrade
 mkdir /home/"$USER"/setupInicial
@@ -10,7 +11,9 @@ sudo apt install xz-utils
 sudo apt update
 sudo apt upgrade
 
+echo ""
 echo "##Instalando o Plank##"
+sleep 2
 sudo apt install plank
 cp -v /usr/share/applications/plank.desktop /home/"$USER"/.config/autostart
 plank
@@ -18,7 +21,9 @@ plank
 sudo apt update
 sudo apt upgrade
 
+echo ""
 echo "##Instalando o Wine##"
+sleep 2
 sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
@@ -30,14 +35,18 @@ winecfg
 sudo apt update
 sudo apt upgrade
 
+echo ""
 echo "##Instalando o GitHub##"
+sleep 2
 sudo apt install git
 sudo add-apt-repository ppa:git-core/ppa
 
 sudo apt update
 sudo apt upgrade
 
+echo ""
 echo "##Instalando o Visual Code##"
+sleep 2
 wget -c https://az764295.vo.msecnd.net/stable/f359dd69833dd8800b54d458f6d37ab7c78df520/code_1.40.2-1574694120_amd64.deb
 sudo dpkg -i /code_1.40.2-1574694120_amd64.deb
 sudo apt install -f
@@ -45,6 +54,7 @@ sudo apt install -f
 sudo apt update
 sudo apt upgrade
 
+echo ""
 echo "##Tema mcOS e Ícones##"
 mkdir /home/"$USER"/.themes
 mkdir /home/"$USER"/.icons
@@ -57,4 +67,6 @@ mv la-capitaine-icon-theme-master /home/"$USER"/.icons/'La Capitaine'
 sudo apt update
 sudo apt upgrade
 
+echo ""
 echo "##Setup Finalizado!##"
+sleep 2
