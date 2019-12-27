@@ -20,7 +20,7 @@ echo ""
 echo "##Instalando o Plank##"
 sleep 1
 sudo apt install plank
-cp -v /user/share/applications/plank.desktop /home/"$USER"/.config/autostart
+cp -v /usr/share/applications/plank.desktop /home/"$USER"/.config/autostart
 (plank &> /dev/null &)
 sleep 1
 echo "Plank instalado..."
