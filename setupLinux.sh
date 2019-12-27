@@ -1,72 +1,71 @@
 #!/bin/bash
 
-echo "##Iniciando o script...##"
+echo "##Iniciando o Script##"
 sleep 2
 sudo apt update
-sudo apt upgrade
-mkdir /home/"$USER"/setupInicial
-cd /home/"$USER"/setupInicial
 sudo apt install unzip
 sudo apt install xz-utils
+sudo apt install snapd
+sleep 1
+echo "Unzip, XZ-Utils e Snap foram instalados..."
+sleep 1
+
+sleep 1
+
 sudo apt update
-sudo apt upgrade
+
+sleep 1
 
 echo ""
 echo "##Instalando o Plank##"
-sleep 2
+sleep 1
 sudo apt install plank
-cp -v /usr/share/applications/plank.desktop /home/"$USER"/.config/autostart
+cp -v /user/share/applications/plank.desktop /home/"$USER$"/.config/autostart
 plank
+sleep 1
+echo "Plank instalado..."
+sleep 1
 
 sudo apt update
-sudo apt upgrade
+
+sleep 1
 
 echo ""
-echo "##Instalando o Wine##"
-sleep 2
-sudo dpkg --add-architecture i386
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+echo "##Instaland o Wine##"
+sleep 1
+sudo snap install wine-platform-i386
+sudo snap install wine-platform-i386 --edge
 sudo apt update
-sudo apt install --install-recommends winehq-stable
-winecfg
+sleep 1
+echo "Snap instalado..."
+sleep 1
 
-sudo apt update
-sudo apt upgrade
 
 echo ""
-echo "##Instalando o GitHub##"
-sleep 2
-sudo apt install git
-sudo add-apt-repository ppa:git-core/ppa
+echo "##Instalando o Visual Code"
+sleep 1
+sudo snap install code --classic
+echo "Visual Studio Code Instalado..."
 
-sudo apt update
-sudo apt upgrade
-
-echo ""
-echo "##Instalando o Visual Code##"
-sleep 2
-wget -c https://az764295.vo.msecnd.net/stable/f359dd69833dd8800b54d458f6d37ab7c78df520/code_1.40.2-1574694120_amd64.deb
-sudo dpkg -i /code_1.40.2-1574694120_amd64.deb
-sudo apt install -f
-
-sudo apt update
-sudo apt upgrade
+sleep 1
 
 echo ""
-echo "##Tema mcOS e Ícones##"
-mkdir /home/"$USER"/.themes
-mkdir /home/"$USER"/.icons
-wget -c https://dllb2.pling.com/api/files/download/id/1570117779/s/32f2415036388e6e7405cdd1aa45e49fa899dc9974dd7931d97414e2a3f9244ae08f47eb736977feee26f6ac39e74675a9c986f7a68fb88fdd5dc554c516799c/t/1575866859/c/32f2415036388e6e7405cdd1aa45e49fa899dc9974dd7931d97414e2a3f9244ae08f47eb736977feee26f6ac39e74675a9c986f7a68fb88fdd5dc554c516799c/lt/download/McOS-CTLina-Mint-Dark.tar.xz
+echo "##Tema mcOs e Icones"
+
+mkdir /home/"$USER$"/.themes
+mkdir /home/"$USER$"/.icons
+wget -c https://dllb2.pling.com/api/files/download/id/1570117779/s/3a997923ec870cc3ec74349757d862e02432c088bce9dfe019cc57b989d9ac852042e191915c349fefc0a19cc5fc8aced2cbf504cc00b6af98c5ae857903a59a/t/1577468957/c/3a997923ec870cc3ec74349757d862e02432c088bce9dfe019cc57b989d9ac852042e191915c349fefc0a19cc5fc8aced2cbf504cc00b6af98c5ae857903a59a/lt/download/McOS-CTLina-Mint-Dark.tar.xz
 tar -xf McOS-CTLina-Mint-Dark.tar.xz
-mv McOS-CTLina-Mint-Dark /home/"$USER"/.themes/'mcOS Catalina Mint'
-wget -c https://github.com/keeferrourke/la-capitaine-icon-theme/archive/master.zip
+mv McOS-CTLina-Mint-Dark /home/"$USER$"/.themes/'mcOS Catalina Mint'
+wget -c https://github.com/keeferrourke/la-capitaine-icon-theme.git
 unzip la-capitaine-icon-theme-master.zip
-mv la-capitaine-icon-theme-master /home/"$USER"/.icons/'La Capitaine'
+mv la-capitaine-icon-theme-master /home/"$USER$"/.icons/'La Capitaine'
+sleep 1
+echo "Tema e Icones instalados..."
+sleep 1
+
 sudo apt update
-sudo apt upgrade
 
 echo ""
-echo "##Setup Finalizado!##"
-sleep 2
+echo "##Setup Finalizado##"
+sleep 1
