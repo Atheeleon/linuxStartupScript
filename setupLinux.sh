@@ -35,11 +35,12 @@ echo "##Instaland o Wine##"
 sleep 1
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic mai
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt update && sudo apt install --install-recommends winehq-stable
+(winecfg &> /dev/null &)
 sudo apt update
 sleep 1
-echo "Snap instalado..."
+echo "Wine instalado..."
 sleep 1
 
 
@@ -60,8 +61,7 @@ wget -c https://dllb2.pling.com/api/files/download/id/1570117779/s/3a997923ec870
 tar -xf McOS-CTLina-Mint-Dark.tar.xz
 mv McOS-CTLina-Mint-Dark /home/"$USER"/.themes/'mcOS Catalina Mint'
 git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
-unzip la-capitaine-icon-theme-master.zip
-mv la-capitaine-icon-theme-master /home/"$USER"/.icons/'La Capitaine'
+mv la-capitaine-icon-theme /home/"$USER"/.icons/'La Capitaine'
 sleep 1
 echo "Tema e Icones instalados..."
 sleep 1
