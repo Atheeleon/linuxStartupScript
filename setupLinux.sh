@@ -58,10 +58,11 @@ echo "##Tema mcOs e Icones"
 
 mkdir /home/"$USER"/.themes
 mkdir /home/"$USER"/.icons
-wget https://dllb2.pling.com/api/files/download/id/1570117779/s/3a997923ec870cc3ec74349757d862e02432c088bce9dfe019cc57b989d9ac852042e191915c349fefc0a19cc5fc8aced2cbf504cc00b6af98c5ae857903a59a/t/1577468957/c/3a997923ec870cc3ec74349757d862e02432c088bce9dfe019cc57b989d9ac852042e191915c349fefc0a19cc5fc8aced2cbf504cc00b6af98c5ae857903a59a/lt/download/McOS-CTLina-Mint-Dark.tar.xz
-tar -xf McOS-CTLina-Mint-Dark.tar.xz
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1kxWEuNhi5wKJ7Tx2Zy6MURWKQJHHen4U' -O  McOS-CTLina-Mint-Dark
+unrar McOS-CTLina-Mint-Dark.rar
 mv McOS-CTLina-Mint-Dark /home/"$USER"/.themes/'mcOS Catalina Mint'
-git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1dMHCKy5Y3cIgGT1rnmRl5JeIXXRyRC4W' -O la-capitaine-icon-theme
+gunzip la-capitaine-icon-theme
 mv la-capitaine-icon-theme /home/"$USER"/.icons/'La Capitaine'
 sleep 1
 echo "Tema e Icones instalados..."
