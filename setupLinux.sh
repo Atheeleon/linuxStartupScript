@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 echo "##Iniciando o Script##"
@@ -59,11 +60,11 @@ echo "##Tema mcOs e Icones"
 
 mkdir /home/"$USER"/.themes
 mkdir /home/"$USER"/.icons
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1kxWEuNhi5wKJ7Tx2Zy6MURWKQJHHen4U' -O  McOS-CTLina-Mint-Dark
-unrar McOS-CTLina-Mint-Dark.rar
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1kxWEuNhi5wKJ7Tx2Zy6MURWKQJHHen4U' -O  McOS-CTLina-Mint-Dark.rar
+unrar x McOS-CTLina-Mint-Dark.rar
 mv McOS-CTLina-Mint-Dark /home/"$USER"/.themes/'mcOS Catalina Mint'
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1dMHCKy5Y3cIgGT1rnmRl5JeIXXRyRC4W' -O la-capitaine-icon-theme
-gunzip la-capitaine-icon-theme
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1xXr4KBi9j4rbjQ7oQV5OSHk0wgzLPJUd' -O la-capitaine-icon-theme.zip
+unrar x la-capitaine-icon-theme.rar
 mv la-capitaine-icon-theme /home/"$USER"/.icons/'La Capitaine'
 sleep 1
 echo "Tema e Icones instalados..."
