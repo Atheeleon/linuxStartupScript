@@ -60,8 +60,8 @@ echo "##Tema mcOs e Icones"
 
 mkdir /home/"$USER"/.themes
 mkdir /home/"$USER"/.icons
-mv McOS-CTLina-Mint-Dark ~/.themes/'mcOS Catalina Mint'
-mv la-capitaine-icon-theme-master ~/.icons/'La Capitaine'
+cp -r McOS-CTLina-Mint-Dark ~/.themes/'mcOS Catalina Mint'
+cp -r la-capitaine-icon-theme-master ~/.icons/'La Capitaine'
 sleep 1
 echo "Tema e Icones instalados..."
 sleep 1
