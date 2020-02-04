@@ -60,8 +60,6 @@ echo "##Tema mcOs e Icones"
 
 mkdir /home/"$USER"/.themes
 mkdir /home/"$USER"/.icons
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&1l2CL-bzwyx7gcynYSLCwrRbnhqYd-EyJ' -O  MCOS.rar
-unrar x MCOS.rar
 mv McOS-CTLina-Mint-Dark ~/.themes/'mcOS Catalina Mint'
 mv la-capitaine-icon-theme-master ~/.icons/'La Capitaine'
 sleep 1
