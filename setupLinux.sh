@@ -8,10 +8,11 @@ sudo apt install unzip
 sudo apt install xz-utils
 sudo apt install snapd
 sleep 1
+git config --global user.email "poeticum.visum@gmail.com"
+git config --global user.name "Atheeleon"
 echo "Unzip, XZ-Utils e Snap foram instalados..."
-sleep 1
-
-sleep 1
+echo "Git configurado..."
+sleep 2
 
 sudo apt update
 
@@ -40,7 +41,7 @@ echo "Visual Studio Code Instalado..."
 sleep 1
 
 echo ""
-echo "##Tema mcOs e Icones"
+echo "##Tema mcOs e Icones##"
 
 mkdir /home/"$USER"/.themes
 mkdir /home/"$USER"/.icons
@@ -48,6 +49,15 @@ cp -r McOS-CTLina-Mint-Dark ~/.themes/'mcOS Catalina Mint'
 cp -r la-capitaine-icon-theme-master ~/.icons/'La Capitaine'
 sleep 1
 echo "Tema e Icones instalados..."
+sleep 1
+
+sudo apt update
+
+echo ""
+echo "##Instalando Spotify##"
+sudo snap install spotify --classic
+sleep 1
+echo "Spotify instalado..."
 sleep 1
 
 sudo apt update
