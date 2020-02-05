@@ -63,5 +63,17 @@ sleep 1
 sudo apt update
 
 echo ""
+echo "##Instalando Wine##"
+sudo dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/Release.key
+sudo apt-key add Release.key
+sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ -y
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+sudo apt-get update
+sudo apt-get install --install-recommends winehq-stable -y
+(plank &> /dev/null &)
+echo "Wine instalado..."
+
+echo ""
 echo "##Setup Finalizado##"
 sleep 1
