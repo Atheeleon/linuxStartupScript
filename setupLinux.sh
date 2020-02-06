@@ -71,7 +71,7 @@ sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ -y
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
 sudo apt-get update
 sudo apt-get install --install-recommends winehq-stable -y
-(plank &> /dev/null &)
+(winecfg &> /dev/null &)
 echo "Wine instalado..."
 
 echo ""
